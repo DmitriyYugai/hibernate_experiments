@@ -14,7 +14,7 @@ public class Mark {
     private int id;
     private String name;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "mark")
     private List<Model> models = new ArrayList<>();
 
     public Mark() {
@@ -38,6 +38,14 @@ public class Mark {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Model> getModels() {
+        return models;
+    }
+
+    public void setModels(List<Model> models) {
+        this.models = models;
     }
 
     public void addModel(Model model) {

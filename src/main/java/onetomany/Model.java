@@ -11,6 +11,10 @@ public class Model {
     private int id;
     private String name;
 
+    @ManyToOne
+    @JoinColumn(name = "mark_id")
+    private Mark mark;
+
     public Model() {
     }
 
@@ -32,5 +36,13 @@ public class Model {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Mark getMark() {
+        return mark;
+    }
+
+    public void setMark(Mark mark) {
+        this.mark = mark;
     }
 }

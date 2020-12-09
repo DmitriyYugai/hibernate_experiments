@@ -15,11 +15,19 @@ public class OneToMany {
             Session session = sf.openSession();
             session.beginTransaction();
 
+            Mark audi = new Mark("AUDI");
+            session.save(audi);
+
             Model one = new Model("A4");
+            one.setMark(audi);
             Model two = new Model("A6");
+            two.setMark(audi);
             Model three = new Model("A8");
+            three.setMark(audi);
             Model four = new Model("Q2");
+            four.setMark(audi);
             Model five = new Model("Q3");
+            five.setMark(audi);
 
             session.save(one);
             session.save(two);
@@ -27,12 +35,12 @@ public class OneToMany {
             session.save(four);
             session.save(five);
 
-            Mark audi = new Mark("AUDI");
-            audi.addModel(session.find(Model.class, 1));
-            audi.addModel(session.find(Model.class, 2));
-            audi.addModel(session.find(Model.class, 3));
-            audi.addModel(session.find(Model.class, 4));
-            audi.addModel(session.find(Model.class, 5));
+
+//            audi.addModel(session.find(Model.class, 1));
+//            audi.addModel(session.find(Model.class, 2));
+//            audi.addModel(session.find(Model.class, 3));
+//            audi.addModel(session.find(Model.class, 4));
+//            audi.addModel(session.find(Model.class, 5));
 
             session.save(audi);
 
