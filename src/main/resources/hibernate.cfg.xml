@@ -20,5 +20,7 @@
         <mapping class="tracker.Item" />
         <mapping class="onetomany.Mark" />
         <mapping class="onetomany.Model" />
+        <mapping class="manytomany.Book" />
+        <mapping class="manytomany.Author" />
     </session-factory>
 </hibernate-configuration>
