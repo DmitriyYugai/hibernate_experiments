@@ -17,10 +17,11 @@
         <property name="format_sql">true</property>
         <property name="use_sql_comments">true</property>
 
-        <mapping class="tracker.Item" />
-        <mapping class="onetomany.Mark" />
-        <mapping class="onetomany.Model" />
-        <mapping class="manytomany.Book" />
-        <mapping class="manytomany.Author" />
+        <mapping class="tracker.Item"/>
+        <mapping class="onetomany.Mark"/>
+        <mapping class="onetomany.Model"/>
+        <mapping class="manytomany.Book"/>
+        <mapping class="manytomany.Author"/>
+        <mapping class="hql.Candidate"/>
     </session-factory>
 </hibernate-configuration>
