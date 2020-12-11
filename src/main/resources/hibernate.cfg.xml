@@ -23,5 +23,7 @@
         <mapping class="manytomany.Book"/>
         <mapping class="manytomany.Author"/>
         <mapping class="hql.Candidate"/>
+        <mapping class="hql.JobBase"/>
+        <mapping class="hql.Job"/>
     </session-factory>
 </hibernate-configuration>
